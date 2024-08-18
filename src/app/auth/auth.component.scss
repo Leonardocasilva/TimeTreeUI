@@ -1,0 +1,38 @@
+.main {
+  background: url('./../../assets/img/login-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  .cover-img {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    height: 100%;
+
+    .auth {
+      width: 31.3%;
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+          width: 500px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .button-container {
+        button {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
