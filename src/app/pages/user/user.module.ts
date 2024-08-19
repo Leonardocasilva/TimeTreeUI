@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user-routing.module';
 import { TimeControlComponent } from './time-control/time-control.component';
-
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 
 
 @NgModule({
@@ -16,6 +16,7 @@ import { TimeControlComponent } from './time-control/time-control.component';
     CommonModule,
     UserRoutingModule,
     TtMainLayoutModule,
+    NzCalendarModule
   ]
 })
 export class UserModule { }
