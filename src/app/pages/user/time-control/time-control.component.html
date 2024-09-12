@@ -1,1 +1,34 @@
 <nz-calendar (nzSelectChange)="onDateSelect($event)"></nz-calendar>
+
+<nz-modal [(nzVisible)]="isModalVisible" nzTitle="Apontamento de Horas" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="timeTrackingForm">
+      <div class="row">
+        <div class="col-md-12">
+          <label for="workedTime">Data do Apontamento</label>
+          <nz-date-picker class="form-control" formControlName="selectedDate"></nz-date-picker>
+        </div>
+        <div class="col-md-6">
+          <label for="workedTime">Inicio da Jornada</label>
+          <nz-time-picker class="form-control" formControlName="startJourney"></nz-time-picker>
+        </div>
+        <div class="col-md-6">
+          <label for="workedTime">Inicio do Intervalo</label>
+          <nz-time-picker class="form-control" formControlName="startInterval"></nz-time-picker>
+        </div>
+        <div class="col-md-6">
+          <label for="workedTime">Fim do Intervalo</label>
+          <nz-time-picker class="form-control" formControlName="endInterval"></nz-time-picker>
+        </div>
+        <div class="col-md-6">
+          <label for="workedTime">Fim da Jornada</label>
+          <nz-time-picker class="form-control" formControlName="endJourney"></nz-time-picker>
+        </div>
+        <div class="col-md-12">
+          <label for="desc">Descrição</label>
+          <textarea class="form-control" formControlName="description" id="description"></textarea>
+        </div>
+      </div>
+  </form>
+  </ng-container>
+</nz-modal>

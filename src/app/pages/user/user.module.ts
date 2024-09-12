@@ -5,7 +5,10 @@ import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user-routing.module';
 import { TimeControlComponent } from './time-control/time-control.component';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
-
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,11 @@ import { NzCalendarModule } from 'ng-zorro-antd/calendar';
     CommonModule,
     UserRoutingModule,
     TtMainLayoutModule,
-    NzCalendarModule
+    ReactiveFormsModule,
+    NzCalendarModule,
+    NzModalModule,
+    NzTimePickerModule,
+    NzDatePickerModule
   ]
 })
 export class UserModule { }
