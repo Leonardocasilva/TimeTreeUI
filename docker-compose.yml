@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  build-front:
+    container_name: build-front
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: build
+    ports:
+      - "4200:4200"
+    volumes:
+      - /app/node_modules
+  time-tree-ui:
+      container_name: time-tree-ui
+      build:
+        context: .
+        dockerfile: Dockerfile
+        target: production
+      ports:
+        - "80:80"
+      volumes:
+        - ./nginx-custom.conf:/etc/nginx/conf.d/default.conf
+      depends_on:
+        - build-front

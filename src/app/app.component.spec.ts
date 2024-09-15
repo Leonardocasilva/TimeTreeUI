@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'time-three'`, () => {
+  it(`should have as title 'time-tree'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('time-three');
+    expect(app.title).toEqual('time-tree');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('time-three app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('time-tree app is running!');
   });
 });

@@ -1,0 +1,74 @@
+<div class="copany-data">
+  <h1>Dados da Empresa</h1>
+  <form [formGroup]="companyDataForm">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="document" class="form-control" id="floatingInput"
+            placeholder="00.000.000/0000-00" (blur)="getCompanyData()">
+          <label for="floatingInput">CNPJ</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="socialName" class="form-control" id="floatingInput">
+          <label for="floatingInput">Nome da empresa</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="phantasyName" class="form-control" id="floatingInput">
+          <label for="floatingInput">Nome fantasia</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="street" class="form-control" id="floatingInput">
+          <label for="floatingInput">Endereço</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="number" class="form-control" id="floatingInput">
+          <label for="floatingInput">Número</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="neighborhood" class="form-control" id="floatingInput">
+          <label for="floatingInput">Bairro</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="city" class="form-control" id="floatingInput">
+          <label for="floatingInput">Cidade</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="state" class="form-control" id="floatingInput">
+          <label for="floatingInput">Estado</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-floating mb-3">
+          <input type="email" formControlName="email" class="form-control" id="floatingInput">
+          <label for="floatingInput">E-mail</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-floating mb-3">
+          <input type="text" formControlName="cellphone" class="form-control" id="floatingInput">
+          <label for="floatingInput">Celular / Telefone</label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

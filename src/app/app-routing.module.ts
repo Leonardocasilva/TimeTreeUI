@@ -8,7 +8,11 @@ const routes: Routes = [
   },
   {
     path: 'company',
-    loadChildren: () => import('src/app/companie/companie.module').then(m => m.CompanieModule)
+    loadChildren: () => import('src/app/company/companie.module').then(m => m.CompanyModule)
+  },
+  {
+    path: 'consultant',
+    loadChildren: () => import('src/app/user/user.module').then(m => m.UserModule)
   },
   {
     path: '**',

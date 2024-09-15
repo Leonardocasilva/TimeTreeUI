@@ -1,3 +1,4 @@
+import { ReceitaFederalService } from './../assets/services/receita-federal.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

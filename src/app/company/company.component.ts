@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 const { version: version } = require('./../../../package.json');
 
 @Component({
-  selector: 'app-companie',
-  templateUrl: './companie.component.html',
-  styleUrls: ['./companie.component.scss']
+  selector: 'app-company',
+  templateUrl: './company.component.html',
+  styleUrls: ['./company.component.scss']
 })
-export class CompanieComponent {
+export class CompanyComponent {
   sysVersion: string = version;
   isCollpased: boolean = false;
 }

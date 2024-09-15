@@ -1,1 +1,41 @@
-<p>user works!</p>
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollpased"  nzWidth="200px">
+    <div class="logo">
+      <img src="./../../assets/img/tt-logo-side.png" alt="logo" *ngIf="!isCollpased">
+      <img src="./../../assets/img/tt-logo-no-text.png" alt="logo" *ngIf="isCollpased">
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <span nz-icon nzType="pie-chart"></span>
+        <span>Dashboard</span>
+      </li>
+      <li nz-menu-item>
+        <span nz-icon nzType="desktop"></span>
+        <span>Controle de Horas</span>
+      </li>
+      <li nz-submenu nzTitle="Consultores" nzIcon="user">
+        <ul>
+          <li nz-menu-item>Controle de Horas</li>
+          <li nz-menu-item>Controle de NF</li>
+          <li nz-menu-item>Controle de Invoice</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header></nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>
+      <div class="logo">
+        <img class="img-fluid" src="./../../assets/img/tt-logo-no-text.png" alt="footer-logo">
+      </div>
+      <div class="version">
+        v. {{sysVersion}}
+      </div>
+    </nz-footer>
+  </nz-layout>
+</nz-layout>

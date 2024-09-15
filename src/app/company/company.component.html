@@ -9,10 +9,6 @@
         <span nz-icon nzType="pie-chart"></span>
         <span>Dashboard</span>
       </li>
-      <li nz-menu-item>
-        <span nz-icon nzType="desktop"></span>
-        <span>Controle de Horas</span>
-      </li>
       <li nz-submenu nzTitle="Consultores" nzIcon="user">
         <ul>
           <li nz-menu-item>Controle de Horas</li>
@@ -22,8 +18,8 @@
       </li>
       <li nz-submenu nzTitle="Empresa" nzIcon="team">
         <ul>
-          <li nz-menu-item>Dados da Empresa</li>
-          <li nz-menu-item>Configurações</li>
+          <li nz-menu-item [routerLink]="['company-data']" >Dados da Empresa</li>
+          <li nz-menu-item [routerLink]="['settings']" >Configurações</li>
         </ul>
       </li>
     </ul>
@@ -32,7 +28,7 @@
     <nz-header></nz-header>
     <nz-content>
       <div class="inner-content">
-
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
     <nz-footer>

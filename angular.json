@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "time-three": {
+    "time-tree": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/time-three",
+            "outputPath": "dist/time-tree-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -54,6 +54,12 @@
                   "maximumError": "4kb"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "outputHashing": "all"
             },
             "development": {
@@ -65,16 +71,16 @@
               "namedChunks": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "time-three:build:production"
+              "browserTarget": "time-tree:build:production"
             },
             "development": {
-              "browserTarget": "time-three:build:development"
+              "browserTarget": "time-tree:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "time-three:build"
+            "browserTarget": "time-tree:build"
           }
         },
         "test": {
